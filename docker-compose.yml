@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  akasa-reports-cleaner:
+    build: .
+    container_name: akasa-reports-cleaner
+    ports:
+      - "8501:8501"
+    restart: unless-stopped
+    environment:
+      - PYTHONUNBUFFERED=1
